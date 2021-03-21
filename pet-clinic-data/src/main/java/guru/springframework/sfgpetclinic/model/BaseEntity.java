@@ -1,9 +1,18 @@
 package guru.springframework.sfgpetclinic.model;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 
+// Tell JPA this is the superclass,
+// all other classes are going to be inheriting it.
+@MappedSuperclass
 public class BaseEntity implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     public Long getId() {
