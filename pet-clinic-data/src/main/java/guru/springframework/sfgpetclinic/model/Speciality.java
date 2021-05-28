@@ -6,6 +6,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+/**
+ * Created by jt on 7/29/18.
+ */
 @Setter
 @Getter
 @NoArgsConstructor
@@ -13,8 +16,9 @@ import javax.persistence.Table;
 @Builder
 @Entity
 @Table(name = "specialties")
-public class Specialty extends BaseEntity{
+public class Speciality extends BaseEntity {
 
     @Column(name = "description")
     private String description;
+
 }
